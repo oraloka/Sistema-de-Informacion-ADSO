@@ -40,6 +40,7 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       change: "+2 esta semana",
       progress: 75,
       trend: "up",
+      emoji: "📝",
     },
     {
       title: "En Revisión",
@@ -52,18 +53,20 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       change: "Pendientes",
       progress: 40,
       trend: "neutral",
+      emoji: "⏳",
     },
     {
       title: "Aprobadas",
       value: "8",
       description: "Fichas aprobadas",
       icon: CheckCircle,
-      color: "text-emerald-800",
-      bgColor: "bg-emerald-50",
-      borderColor: "border-emerald-400",
+      color: "text-purple-700",
+      bgColor: "bg-purple-50",
+      borderColor: "border-purple-400",
       change: "+5 este mes",
       progress: 90,
       trend: "up",
+      emoji: "🎉",
     },
     {
       title: "Rechazadas",
@@ -76,6 +79,7 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       change: "Para revisar",
       progress: 15,
       trend: "down",
+      emoji: "🔄",
     },
   ]
 
@@ -88,6 +92,7 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       fecha: "2024-01-15",
       cupos: 25,
       priority: "high",
+      emoji: "✅",
       color: "green",
       borderColor: "border-green-300",
       bgColor: "bg-green-50",
@@ -100,6 +105,7 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       fecha: "2024-01-20",
       cupos: 30,
       priority: "medium",
+      emoji: "⏰",
       color: "orange",
       borderColor: "border-orange-300",
       bgColor: "bg-orange-50",
@@ -112,6 +118,7 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       fecha: "2024-01-18",
       cupos: 20,
       priority: "high",
+      emoji: "🔄",
       color: "red",
       borderColor: "border-red-300",
       bgColor: "bg-red-50",
@@ -156,7 +163,7 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
                 <h1 className="text-3xl font-bold text-green-700">Dashboard del Instructor</h1>
                 <div className="flex items-center space-x-2 mt-1">
                   <Sparkles className="h-4 w-4 text-orange-500" />
-                  <span className="text-emerald-800 font-bold">Tu Espacio Creativo</span>
+                  <span className="text-purple-600 font-bold">CampeSena - Tu Espacio Creativo</span>
                 </div>
               </div>
             </div>
@@ -175,7 +182,7 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
           <div className="flex items-center space-x-4">
             <Button
               onClick={() => onTabChange("create-ficha")}
-              className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 font-bold px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300 border-2 border-emerald-300"
+              className="bg-purple-100 text-purple-700 hover:bg-purple-200 font-bold px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300 border-2 border-purple-300"
               variant="outline"
             >
               <Plus className="mr-2 h-5 w-5" />
@@ -202,6 +209,7 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
             >
               <CardContent className="p-0">
                 <div className={`${stat.bgColor} p-6 relative overflow-hidden`}>
+                  <div className="absolute top-2 right-2 text-2xl opacity-80">{stat.emoji}</div>
 
                   <div className="flex items-center justify-between relative z-10">
                     <div className="flex items-center space-x-3">
@@ -279,13 +287,13 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       </div>
 
       {/* Recent Fichas Elegantes */}
-      <Card className="border-2 border-emerald-300 shadow-md bg-white">
-        <CardHeader className="bg-emerald-50 border-b-2 border-emerald-200">
-          <CardTitle className="flex items-center text-xl text-emerald-500">
-            <Award className="mr-3 h-6 w-6 text-emerald-500" />
+      <Card className="border-2 border-purple-300 shadow-md bg-white">
+        <CardHeader className="bg-purple-50 border-b-2 border-purple-200">
+          <CardTitle className="flex items-center text-xl text-purple-700">
+            <Award className="mr-3 h-6 w-6 text-purple-600" />
             Mis Fichas Recientes
           </CardTitle>
-          <CardDescription className="text-emerald-600 font-medium">
+          <CardDescription className="text-purple-600 font-medium">
             Últimas fichas de caracterización creadas
           </CardDescription>
         </CardHeader>
@@ -298,7 +306,7 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
               >
                 <div className="flex-1">
                   <div className="flex items-center space-x-3 mb-2">
-      
+                    <div className="text-3xl">{ficha.emoji}</div>
                     <h3 className="font-bold text-lg text-gray-800">{ficha.programa}</h3>
                     <Badge
                       className={`text-xs font-bold ${

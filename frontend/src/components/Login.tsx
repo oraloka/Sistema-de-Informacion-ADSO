@@ -65,9 +65,9 @@ export default function Login() {
       icon: Award,
       title: "Aprobación Digital",
       description: "Firmas digitales seguras",
-      color: "text-emerald-800",
-      bgColor: "bg-emerald-50",
-      borderColor: "border-emerald-300",
+      color: "text-purple-600",
+      bgColor: "bg-purple-50",
+      borderColor: "border-purple-300",
     },
     {
       icon: FileText,
@@ -100,10 +100,10 @@ export default function Login() {
 
             <h1 className="text-4xl font-bold mb-4 leading-tight text-green-700">
               Sistema de Gestión
-              <span className="block text-orange-600 mt-2 text-3xl">CGAO</span>
+              <span className="block text-orange-600 mt-2 text-3xl">CampeSena</span>
             </h1>
 
-            <p className="text-xl text-emerald-800 mb-8 leading-relaxed font-medium">
+            <p className="text-xl text-purple-600 mb-8 leading-relaxed font-medium">
               Plataforma integral para la gestión de fichas de caracterización y formación complementaria
             </p>
 
@@ -118,7 +118,7 @@ export default function Login() {
 
           {/* Características */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-emerald-800 mb-6 text-center flex items-center justify-center">
+            <h3 className="text-xl font-bold text-purple-700 mb-6 text-center flex items-center justify-center">
               <Star className="h-5 w-5 mr-2 text-orange-500" />
               ¿Qué puedes hacer?
             </h3>
@@ -146,10 +146,10 @@ export default function Login() {
           </div>
 
           {/* Información del centro */}
-          <div className="mt-12 p-6 bg-white rounded-xl border-2 border-emerald-300">
+          <div className="mt-12 p-6 bg-white rounded-xl border-2 border-purple-300">
             <div className="text-center">
               <div className="text-3xl mb-3">🏛️</div>
-              <h4 className="font-bold text-emerald-500 text-lg mb-2">Centro de Gestión Agroempresarial del Oriente</h4>
+              <h4 className="font-bold text-purple-700 text-lg mb-2">Centro de Gestión Agroempresarial del Oriente</h4>
               <p className="text-green-600 text-sm mb-3 font-medium">
                 Formación para el trabajo y el desarrollo humano
               </p>
@@ -170,7 +170,7 @@ export default function Login() {
           <div className="text-center mb-10">
             <div className="text-4xl mb-4">👋</div>
             <h2 className="text-3xl font-bold text-green-700 mb-4">¡Bienvenido!</h2>
-            <p className="text-emerald-500 text-lg mb-6 font-medium">Ingresa tus credenciales para continuar</p>
+            <p className="text-purple-600 text-lg mb-6 font-medium">Ingresa tus credenciales para continuar</p>
             <div className="w-20 h-2 bg-gradient-to-r from-green-400 to-orange-400 mx-auto rounded-full"></div>
           </div>
 
@@ -247,9 +247,9 @@ export default function Login() {
           </Card>
 
           {/* Credenciales de prueba */}
-          <div className="mt-8 p-6 bg-white rounded-xl border-2 border-emerald-300">
+          <div className="mt-8 p-6 bg-white rounded-xl border-2 border-purple-300">
             <div className="text-center">
-              <p className="text-sm font-bold text-emerald-500 mb-4 flex items-center justify-center">
+              <p className="text-sm font-bold text-purple-700 mb-4 flex items-center justify-center">
                 <Shield className="h-4 w-4 mr-2" />
                 Credenciales de Prueba
               </p>

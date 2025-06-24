@@ -58,7 +58,7 @@ export default function Profile() {
                 Usuario Activo
               </Badge>
             </div>
-            <p className="text-emerald-500 flex items-center font-bold">
+            <p className="text-purple-600 flex items-center font-bold">
               <Building className="h-4 w-4 mr-2" />
               {user?.center}
             </p>
@@ -112,8 +112,8 @@ export default function Profile() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-sm font-bold text-emerald-500 flex items-center">
-                      <Phone className="h-4 w-4 mr-2 text-emerald-500" />
+                    <Label htmlFor="phone" className="text-sm font-bold text-purple-700 flex items-center">
+                      <Phone className="h-4 w-4 mr-2 text-purple-600" />
                       Teléfono
                     </Label>
                     <Input
@@ -121,7 +121,7 @@ export default function Profile() {
                       value={formData.phone}
                       onChange={(e) => handleChange("phone", e.target.value)}
                       placeholder="3001234567"
-                      className="border-2 border-emerald-300 focus:border-emerald-500 focus:ring-emerald-500 font-medium"
+                      className="border-2 border-purple-300 focus:border-purple-500 focus:ring-purple-500 font-medium"
                     />
                   </div>
 
@@ -187,16 +187,16 @@ export default function Profile() {
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-600 font-medium">Último Acceso</span>
-                <Badge className="bg-emerald-100 text-emerald-500 border-2 border-emerald-300 font-bold">Hoy</Badge>
+                <Badge className="bg-purple-100 text-purple-700 border-2 border-purple-300 font-bold">Hoy</Badge>
               </div>
             </CardContent>
           </Card>
 
           {/* Información del Sistema */}
-          <Card className="border-2 border-emerald-300 shadow-md">
-            <CardHeader className="bg-emerald-50 border-b-2 border-emerald-200">
-              <CardTitle className="text-lg text-emerald-500 flex items-center">
-                <Calendar className="mr-2 h-5 w-5 text-emerald-500" />
+          <Card className="border-2 border-purple-300 shadow-md">
+            <CardHeader className="bg-purple-50 border-b-2 border-purple-200">
+              <CardTitle className="text-lg text-purple-700 flex items-center">
+                <Calendar className="mr-2 h-5 w-5 text-purple-600" />
                 Información del Sistema
               </CardTitle>
             </CardHeader>
@@ -225,7 +225,7 @@ export default function Profile() {
               <div className="text-center">
                 <div className="text-2xl mb-2">🏢</div>
                 <h3 className="font-bold text-orange-700 mb-1">Centro de Gestión</h3>
-                <p className="text-sm text-emerald-500 mb-2 font-medium">Agroempresarial del Oriente</p>
+                <p className="text-sm text-purple-600 mb-2 font-medium">Agroempresarial del Oriente</p>
                 <Badge className="bg-green-100 text-green-700 border-2 border-green-300 text-xs font-bold">
                   Antioquia, Colombia
                 </Badge>

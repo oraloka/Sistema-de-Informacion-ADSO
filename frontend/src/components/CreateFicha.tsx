@@ -182,10 +182,10 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
             <CardHeader className="bg-gradient-to-r from-emerald-50 to-teal-50 border-b border-slate-200">
               <CardTitle className="flex items-center text-xl text-slate-800">
                 <div className="p-2 bg-emerald-100 rounded-lg mr-3">
-                  <Building className="h-6 w-6 text-emerald-800" />
+                  <Building className="h-6 w-6 text-emerald-600" />
                 </div>
                 Datos Iniciales
-                <Badge className="ml-auto bg-emerald-100 text-emerald-800 border border-emerald-200">Paso 1/6</Badge>
+                <Badge className="ml-auto bg-emerald-100 text-emerald-700 border border-emerald-200">Paso 1/6</Badge>
               </CardTitle>
               <CardDescription className="text-slate-600">
                 Información básica del centro y la ficha de caracterización
@@ -194,7 +194,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
             <CardContent className="p-6 space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="centro" className="text-sm font-medium text-slate-700 flex items-center">
-                  <Building className="h-4 w-4 mr-2 text-emerald-800" />
+                  <Building className="h-4 w-4 mr-2 text-emerald-600" />
                   Centro de Formación
                 </Label>
                 <Input
@@ -253,7 +253,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
             <CardContent className="p-6 space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="nombrePrograma" className="text-sm font-medium text-slate-700 flex items-center">
-                  <Star className="h-4 w-4 mr-2 text-emerald-800" />
+                  <Star className="h-4 w-4 mr-2 text-emerald-600" />
                   Nombre del Programa
                 </Label>
                 <Input
@@ -294,7 +294,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
 
                 <div className="space-y-2">
                   <Label htmlFor="versionPrograma" className="text-sm font-medium text-slate-700 flex items-center">
-                    <Sparkles className="h-4 w-4 mr-2 text-emerald-800" />
+                    <Sparkles className="h-4 w-4 mr-2 text-emerald-600" />
                     Versión
                   </Label>
                   <Input
@@ -337,7 +337,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
 
                 <div className="space-y-2">
                   <Label htmlFor="inscritos" className="text-sm font-medium text-slate-700 flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-emerald-800" />
+                    <CheckCircle className="h-4 w-4 mr-2 text-emerald-600" />
                     Inscritos
                   </Label>
                   <Input
@@ -366,10 +366,10 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
             <CardHeader className="bg-gradient-to-r from-emerald-50 to-teal-50 border-b border-slate-200">
               <CardTitle className="flex items-center text-xl text-slate-800">
                 <div className="p-2 bg-emerald-100 rounded-lg mr-3">
-                  <MapPin className="h-6 w-6 text-emerald-800" />
+                  <MapPin className="h-6 w-6 text-emerald-600" />
                 </div>
                 Ubicación y Empresa
-                <Badge className="ml-auto bg-emerald-100 text-emerald-800 border border-emerald-200">Paso 3/6</Badge>
+                <Badge className="ml-auto bg-emerald-100 text-emerald-700 border border-emerald-200">Paso 3/6</Badge>
               </CardTitle>
               <CardDescription className="text-slate-600">
                 Información de la empresa y/o población objetivo
@@ -379,14 +379,14 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="departamento" className="text-sm font-medium text-slate-700 flex items-center">
-                    <MapPin className="h-4 w-4 mr-2 text-emerald-800" />
+                    <MapPin className="h-4 w-4 mr-2 text-emerald-600" />
                     Departamento
                   </Label>
                   <Select
                     value={formData.departamento}
                     onValueChange={(value) => updateFormData("departamento", value)}
                   >
-                    <SelectTrigger className="border-slate-300 focus:border-emerald-800 focus:ring-emerald-500">
+                    <SelectTrigger className="border-slate-300 focus:border-emerald-500 focus:ring-emerald-500">
                       <SelectValue placeholder="Selecciona el departamento" />
                     </SelectTrigger>
                     <SelectContent>
@@ -415,7 +415,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
                     value={formData.municipio}
                     onChange={(e) => updateFormData("municipio", e.target.value)}
                     placeholder="Nombre del municipio"
-                    className="border-slate-300 focus:border-emerald-800 focus:ring-emerald-500"
+                    className="border-slate-300 focus:border-emerald-500 focus:ring-emerald-500"
                   />
                   {errors.municipio && (
                     <p className="text-sm text-rose-600 flex items-center">
@@ -428,7 +428,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
 
               <div className="space-y-2">
                 <Label htmlFor="empresa" className="text-sm font-medium text-slate-700 flex items-center">
-                  <Star className="h-4 w-4 mr-2 text-emerald-800" />
+                  <Star className="h-4 w-4 mr-2 text-emerald-600" />
                   Empresa o Población Objetivo (Opcional)
                 </Label>
                 <Input
@@ -436,7 +436,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
                   value={formData.empresa}
                   onChange={(e) => updateFormData("empresa", e.target.value)}
                   placeholder="Nombre de la empresa o descripción de la población"
-                  className="border-slate-300 focus:border-emerald-800 focus:ring-emerald-800"
+                  className="border-slate-300 focus:border-emerald-500 focus:ring-emerald-500"
                 />
               </div>
             </CardContent>
@@ -459,14 +459,14 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
             <CardContent className="p-6 space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="programaEspecial" className="text-sm font-medium text-slate-700 flex items-center">
-                  <Sparkles className="h-4 w-4 mr-2 text-emerald-800" />
+                  <Sparkles className="h-4 w-4 mr-2 text-emerald-600" />
                   Tipo de Programa
                 </Label>
                 <Select
                   value={formData.programaEspecial}
                   onValueChange={(value) => updateFormData("programaEspecial", value)}
                 >
-                  <SelectTrigger className="border-slate-300 focus:border-emerald-800 focus:ring-emerald-800">
+                  <SelectTrigger className="border-slate-300 focus:border-emerald-500 focus:ring-emerald-500">
                     <SelectValue placeholder="Selecciona el tipo de programa" />
                   </SelectTrigger>
                   <SelectContent>
@@ -499,7 +499,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
                     value={formData.programaEspecialOtro}
                     onChange={(e) => updateFormData("programaEspecialOtro", e.target.value)}
                     placeholder="Describe el tipo de programa"
-                    className="border-slate-300 focus:border-emerald-800 focus:ring-emerald-800"
+                    className="border-slate-300 focus:border-emerald-500 focus:ring-emerald-500"
                   />
                   {errors.programaEspecialOtro && (
                     <p className="text-sm text-rose-600 flex items-center">
@@ -519,10 +519,10 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
             <CardHeader className="bg-gradient-to-r from-emerald-50 to-teal-50 border-b border-slate-200">
               <CardTitle className="flex items-center text-xl text-slate-800">
                 <div className="p-2 bg-emerald-100 rounded-lg mr-3">
-                  <Calendar className="h-6 w-6 text-emerald-800" />
+                  <Calendar className="h-6 w-6 text-emerald-600" />
                 </div>
                 Fechas y Observaciones
-                <Badge className="ml-auto bg-emerald-100 text-emerald-800 border border-emerald-200">Paso 5/6</Badge>
+                <Badge className="ml-auto bg-emerald-100 text-emerald-700 border border-emerald-200">Paso 5/6</Badge>
               </CardTitle>
               <CardDescription className="text-slate-600">Fechas de inicio y finalización del programa</CardDescription>
             </CardHeader>
@@ -530,7 +530,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="fechaInicio" className="text-sm font-medium text-slate-700 flex items-center">
-                    <Calendar className="h-4 w-4 mr-2 text-emerald-800" />
+                    <Calendar className="h-4 w-4 mr-2 text-emerald-600" />
                     Fecha de Inicio
                   </Label>
                   <Input
@@ -558,7 +558,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
                     type="date"
                     value={formData.fechaFin}
                     onChange={(e) => updateFormData("fechaFin", e.target.value)}
-                    className="border-slate-300 focus:border-emerald-800 focus:ring-emerald-500"
+                    className="border-slate-300 focus:border-emerald-500 focus:ring-emerald-500"
                   />
                   {errors.fechaFin && (
                     <p className="text-sm text-rose-600 flex items-center">
@@ -571,7 +571,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
 
               <div className="space-y-2">
                 <Label htmlFor="observaciones" className="text-sm font-medium text-slate-700 flex items-center">
-                  <FileText className="h-4 w-4 mr-2 text-emerald-800" />
+                  <FileText className="h-4 w-4 mr-2 text-emerald-600" />
                   Observaciones
                 </Label>
                 <Textarea
@@ -605,7 +605,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
             <CardContent className="p-6 space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="firmaInstructor" className="text-sm font-medium text-slate-700 flex items-center">
-                  <FileSignature className="h-4 w-4 mr-2 text-emerald-800" />
+                  <FileSignature className="h-4 w-4 mr-2 text-emerald-600" />
                   Firma Digital (Imagen)
                 </Label>
                 <Input
@@ -613,7 +613,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
                   type="file"
                   accept="image/*"
                   onChange={(e) => updateFormData("firmaInstructor", e.target.files?.[0] || null)}
-                  className="border-slate-300 focus:border-emerald-800 focus:ring-emerald-800"
+                  className="border-slate-300 focus:border-emerald-500 focus:ring-emerald-500"
                 />
                 {errors.firmaInstructor && (
                   <p className="text-sm text-rose-600 flex items-center">
@@ -630,7 +630,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
               {showSuccess && (
                 <Alert className="border-emerald-200 bg-emerald-50">
                   <CheckCircle className="h-4 w-4" />
-                  <AlertDescription className="text-emerald-800">
+                  <AlertDescription className="text-emerald-700">
                     ✓ Ficha de caracterización enviada correctamente al coordinador
                   </AlertDescription>
                 </Alert>
@@ -671,7 +671,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
           <div className="space-y-4">
             <div className="flex justify-between items-center">
               <span className="text-lg font-semibold text-slate-800">{stepTitles[currentStep - 1]}</span>
-              <Badge className="bg-emerald-100 text-emerald-800 border border-emerald-200">
+              <Badge className="bg-emerald-100 text-emerald-700 border border-emerald-200">
                 Paso {currentStep} de {totalSteps}
               </Badge>
             </div>
@@ -730,7 +730,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
           {currentStep < totalSteps ? (
             <Button
               onClick={handleNext}
-              className="bg-gradient-to-r from-emerald-500 to-emerald-800 hover:from-emerald-600 hover:to-emerald-700 shadow-md hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 shadow-md hover:shadow-lg transition-all duration-300"
             >
               Siguiente
               <ChevronRight className="ml-2 h-4 w-4" />

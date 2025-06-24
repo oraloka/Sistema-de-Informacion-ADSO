@@ -143,7 +143,7 @@ export default function InstructorManagement() {
             <DialogContent className="sm:max-w-md">
               <DialogHeader>
                 <DialogTitle className="flex items-center text-slate-800">
-                  <User className="mr-2 h-5 w-5 text-emerald-800" />
+                  <User className="mr-2 h-5 w-5 text-emerald-600" />
                   {editingInstructor ? "Editar Instructor" : "Registrar Nuevo Instructor"}
                 </DialogTitle>
                 <DialogDescription className="text-slate-600">
@@ -156,7 +156,7 @@ export default function InstructorManagement() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-sm font-medium text-slate-700 flex items-center">
-                    <User className="h-4 w-4 mr-2 text-emerald-800" />
+                    <User className="h-4 w-4 mr-2 text-emerald-600" />
                     Nombre Completo
                   </Label>
                   <Input
@@ -187,7 +187,7 @@ export default function InstructorManagement() {
 
                 <div className="space-y-2">
                   <Label htmlFor="phone" className="text-sm font-medium text-slate-700 flex items-center">
-                    <Phone className="h-4 w-4 mr-2 text-emerald-800" />
+                    <Phone className="h-4 w-4 mr-2 text-emerald-600" />
                     Teléfono
                   </Label>
                   <Input
@@ -234,7 +234,7 @@ export default function InstructorManagement() {
       {showSuccess && (
         <Alert className="border-emerald-200 bg-emerald-50">
           <Star className="h-4 w-4" />
-          <AlertDescription className="text-emerald-800">
+          <AlertDescription className="text-emerald-700">
             ✓ Instructor {editingInstructor ? "actualizado" : "registrado"} correctamente
           </AlertDescription>
         </Alert>
@@ -263,7 +263,7 @@ export default function InstructorManagement() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-emerald-100 rounded-xl">
-                    <User className="h-6 w-6 text-emerald-800" />
+                    <User className="h-6 w-6 text-emerald-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg text-slate-800">{instructor.name}</h3>
@@ -289,7 +289,7 @@ export default function InstructorManagement() {
                 </div>
 
                 <div className="flex items-center space-x-2">
-                  <Badge className="bg-emerald-100 text-emerald-800 border border-emerald-200">Activo</Badge>
+                  <Badge className="bg-emerald-100 text-emerald-700 border border-emerald-200">Activo</Badge>
                   <Button
                     variant="outline"
                     size="sm"

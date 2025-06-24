@@ -110,7 +110,7 @@ export default function InstructorFichas({ onTabChange }: InstructorFichasProps)
       case "pendiente":
         return <Badge className="bg-slate-100 text-slate-700 border border-slate-200">En Revisión</Badge>
       case "aprobada":
-        return <Badge className="bg-emerald-100 text-emerald-800 border border-emerald-200">Aprobada</Badge>
+        return <Badge className="bg-emerald-100 text-emerald-700 border border-emerald-200">Aprobada</Badge>
       case "rechazada":
         return <Badge className="bg-slate-100 text-slate-700 border border-slate-200">Rechazada</Badge>
       default:

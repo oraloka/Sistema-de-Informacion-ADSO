@@ -39,9 +39,9 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
       id: "profile",
       label: "Mi Perfil",
       icon: User,
-      color: "text-emerald-800",
-      bgColor: "bg-emerald-50",
-      borderColor: "border-emerald-200",
+      color: "text-purple-600",
+      bgColor: "bg-purple-50",
+      borderColor: "border-purple-200",
     },
     {
       id: "instructors",
@@ -63,9 +63,9 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
       id: "notifications",
       label: "Notificaciones",
       icon: Bell,
-      color: "text-emerald-800",
-      bgColor: "bg-emerald-50",
-      borderColor: "border-emerald-200",
+      color: "text-purple-700",
+      bgColor: "bg-purple-50",
+      borderColor: "border-purple-200",
     },
   ]
 
@@ -82,9 +82,9 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
       id: "profile",
       label: "Mi Perfil",
       icon: User,
-      color: "text-emerald-800",
-      bgColor: "bg-emerald-50",
-      borderColor: "border-emerald-200",
+      color: "text-purple-600",
+      bgColor: "bg-purple-50",
+      borderColor: "border-purple-200",
     },
     {
       id: "fichas",
@@ -140,7 +140,7 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
             <Button
               variant="ghost"
               size="sm"
-              className="relative hover:bg-emerald-50 transition-colors text-emerald-800"
+              className="relative hover:bg-purple-50 transition-colors text-purple-600"
               onClick={() => onTabChange("notifications")}
             >
               <Bell className="h-5 w-5" />
@@ -162,7 +162,7 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
                   </Avatar>
                   <div className="hidden md:block text-left">
                     <p className="font-semibold text-green-700">{user?.name}</p>
-                    <p className="text-xs text-emerald-800 capitalize">{user?.role}</p>
+                    <p className="text-xs text-purple-600 capitalize">{user?.role}</p>
                   </div>
                 </Button>
               </DropdownMenuTrigger>
@@ -191,13 +191,13 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
           ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
         `}
         >
-          <div className="flex items-center justify-between p-6 border-b-2 border-emerald-200 lg:hidden">
-            <span className="text-xl font-semibold text-emerald-800">Menú</span>
+          <div className="flex items-center justify-between p-6 border-b-2 border-purple-200 lg:hidden">
+            <span className="text-xl font-semibold text-purple-700">Menú</span>
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setSidebarOpen(false)}
-              className="hover:bg-emerald-50 text-emerald-800"
+              className="hover:bg-purple-50 text-purple-600"
             >
               <X className="h-5 w-5" />
             </Button>
@@ -207,7 +207,7 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
             <div className="mb-6">
               <div className="p-4 bg-white rounded-lg border-2 border-green-300">
                 <p className="text-sm font-semibold text-green-700 mb-1">Bienvenido</p>
-                <p className="text-xs text-emerald-800 mb-2">{user?.name}</p>
+                <p className="text-xs text-purple-600 mb-2">{user?.name}</p>
                 <Badge className="bg-orange-500 hover:bg-orange-600 text-xs text-white border-2 border-orange-400">
                   {user?.role === "coordinador" ? "Coordinador" : "Instructor"}
                 </Badge>
