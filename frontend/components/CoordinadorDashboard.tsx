@@ -36,46 +36,42 @@ export default function CoordinadorDashboard() {
       change: "+12%",
       trend: "up",
       progress: 85,
-      emoji: "👥",
     },
     {
       title: "Solicitudes Pendientes",
       value: "8",
       description: "Esperando aprobación",
       icon: Clock,
-      color: "text-orange-700",
-      bgColor: "bg-orange-50",
-      borderColor: "border-orange-400",
+      color: "text-emerald-500",
+      bgColor: "bg-emerald-50",
+      borderColor: "border-emerald-400",
       change: "+3",
       trend: "up",
       progress: 60,
-      emoji: "⏰",
     },
     {
       title: "Fichas Aprobadas",
       value: "156",
       description: "Este mes",
       icon: CheckCircle,
-      color: "text-purple-700",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-400",
+      color: "text-green-600",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-400",
       change: "+23%",
       trend: "up",
       progress: 92,
-      emoji: "✅",
     },
     {
       title: "Fichas Rechazadas",
       value: "12",
       description: "Requieren corrección",
       icon: XCircle,
-      color: "text-red-700",
-      bgColor: "bg-red-50",
-      borderColor: "border-red-400",
+      color: "text-green-800",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-400",
       change: "-8%",
       trend: "down",
       progress: 25,
-      emoji: "📝",
     },
   ]
 
@@ -89,29 +85,26 @@ export default function CoordinadorDashboard() {
       borderColor: "border-green-400",
       hoverColor: "hover:bg-green-100",
       action: "instructors",
-      emoji: "👨‍🏫",
     },
     {
       title: "Revisar Solicitudes",
       description: "Aprobar o rechazar fichas",
       icon: FileText,
-      color: "text-orange-600",
-      bgColor: "bg-orange-50",
-      borderColor: "border-orange-400",
-      hoverColor: "hover:bg-orange-100",
+      color: "text-emerald-600",
+      bgColor: "bg-emerald-50",
+      borderColor: "border-green-400",
+      hoverColor: "hover:bg-green-100",
       action: "requests",
-      emoji: "📋",
     },
     {
       title: "Ver Reportes",
       description: "Estadísticas y análisis",
       icon: BarChart3,
-      color: "text-purple-600",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-400",
-      hoverColor: "hover:bg-purple-100",
+      color: "text-green-600",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-400",
+      hoverColor: "hover:bg-green-100",
       action: "reports",
-      emoji: "📊",
     },
   ]
 
@@ -124,10 +117,9 @@ export default function CoordinadorDashboard() {
       status: "pendiente",
       program: "Excel Básico",
       priority: "high",
-      emoji: "🆕",
-      color: "orange",
-      borderColor: "border-orange-300",
-      bgColor: "bg-orange-50",
+      color: "emerald",
+      borderColor: "border-emerald-300",
+      bgColor: "bg-emerald-50",
     },
     {
       id: 2,
@@ -137,7 +129,6 @@ export default function CoordinadorDashboard() {
       status: "aprobada",
       program: "Marketing Digital",
       priority: "medium",
-      emoji: "✅",
       color: "green",
       borderColor: "border-green-300",
       bgColor: "bg-green-50",
@@ -150,10 +141,9 @@ export default function CoordinadorDashboard() {
       status: "info",
       program: "Registro de usuario",
       priority: "low",
-      emoji: "👋",
-      color: "purple",
-      borderColor: "border-purple-300",
-      bgColor: "bg-purple-50",
+      color: "green",
+      borderColor: "border-green-200",
+      bgColor: "bg-green-50",
     },
   ]
 
@@ -168,8 +158,8 @@ export default function CoordinadorDashboard() {
               <div>
                 <h1 className="text-3xl font-bold text-green-700">Dashboard del Coordinador</h1>
                 <div className="flex items-center space-x-2 mt-1">
-                  <Sparkles className="h-4 w-4 text-orange-500" />
-                  <span className="text-purple-600 font-bold">CampeSena - Sistema de Gestión</span>
+                  <Sparkles className="h-4 w-4 text-green-600" />
+                  <span className="text-emerald-600 font-bold">CampeSena - Sistema de Gestión</span>
                 </div>
               </div>
             </div>
@@ -181,15 +171,15 @@ export default function CoordinadorDashboard() {
                 <Calendar className="h-4 w-4 mr-2" />
                 {new Date().toLocaleDateString()}
               </Badge>
-              <Badge className="bg-orange-100 text-orange-700 border-2 border-orange-300 px-4 py-2 font-bold">
+              <Badge className="bg-emerald-100 text-emerald-700 border-2 border-emerald-300 px-4 py-2 font-bold">
                 <Zap className="h-4 w-4 mr-2" />
                 Sistema Activo
               </Badge>
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="p-6 bg-purple-50 rounded-xl hover:scale-105 transition-transform duration-300 border-2 border-purple-300">
-              <Award className="h-12 w-12 text-purple-600" />
+            <div className="p-6 bg-green-50 rounded-xl hover:scale-105 transition-transform duration-300 border-2 border-green-300">
+              <Award className="h-12 w-12 text-green-600" />
             </div>
           </div>
         </div>
@@ -209,7 +199,6 @@ export default function CoordinadorDashboard() {
             >
               <CardContent className="p-0">
                 <div className={`${stat.bgColor} p-6 relative overflow-hidden`}>
-                  <div className="absolute top-2 right-2 text-2xl opacity-80">{stat.emoji}</div>
 
                   <div className="flex items-center justify-between relative z-10">
                     <div className="flex items-center space-x-3">
@@ -259,7 +248,7 @@ export default function CoordinadorDashboard() {
               className={`hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 ${action.borderColor} shadow-md group cursor-pointer bg-white`}
             >
               <CardContent className="p-6 text-center">
-                <div className="text-4xl mb-4">{action.emoji}</div>
+
                 <div
                   className={`p-4 ${action.bgColor} rounded-xl w-fit mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md border-2 ${action.borderColor}`}
                 >
@@ -297,11 +286,10 @@ export default function CoordinadorDashboard() {
                 key={activity.id}
                 className={`flex items-center space-x-4 p-4 rounded-lg transition-colors duration-200 border-2 ${activity.borderColor} ${activity.bgColor} hover:shadow-md`}
               >
-                <div className="text-3xl">{activity.emoji}</div>
                 <div className={`p-3 rounded-lg bg-white border-2 ${activity.borderColor}`}>
-                  {activity.status === "pendiente" && <AlertCircle className="h-5 w-5 text-orange-600" />}
+                  {activity.status === "pendiente" && <AlertCircle className="h-5 w-5 text-green-600" />}
                   {activity.status === "aprobada" && <CheckCircle className="h-5 w-5 text-green-600" />}
-                  {activity.status === "info" && <Users className="h-5 w-5 text-purple-600" />}
+                  {activity.status === "info" && <Users className="h-5 w-5 text-green-600" />}
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center space-x-2 mb-1">
@@ -311,8 +299,8 @@ export default function CoordinadorDashboard() {
                         activity.priority === "high"
                           ? "bg-green-100 text-green-700 border-2 border-green-300"
                           : activity.priority === "medium"
-                            ? "bg-orange-100 text-orange-700 border-2 border-orange-300"
-                            : "bg-purple-100 text-purple-700 border-2 border-purple-300"
+                            ? "bg-emerald-100 text-emerald-700 border-2 border-emerald-300"
+                            : "bg-green-100 text-green-700 border-2 border-green-300"
                       }`}
                     >
                       {activity.priority === "high" ? "Alta" : activity.priority === "medium" ? "Media" : "Baja"}

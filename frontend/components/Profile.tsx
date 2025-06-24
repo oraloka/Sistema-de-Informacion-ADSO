@@ -53,12 +53,12 @@ export default function Profile() {
                 <Shield className="h-4 w-4 mr-2" />
                 {user?.role === "coordinador" ? "Coordinador" : "Instructor"}
               </Badge>
-              <Badge className="bg-orange-100 text-orange-700 border-2 border-orange-300 px-3 py-1 font-bold">
+              <Badge className="bg-emerald-100 text-emerald-700 border-2 border-emerald-300 px-3 py-1 font-bold">
                 <Star className="h-4 w-4 mr-2" />
                 Usuario Activo
               </Badge>
             </div>
-            <p className="text-purple-600 flex items-center font-bold">
+            <p className="text-green-600 flex items-center font-bold">
               <Building className="h-4 w-4 mr-2" />
               {user?.center}
             </p>
@@ -97,8 +97,8 @@ export default function Profile() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-sm font-bold text-orange-700 flex items-center">
-                      <Mail className="h-4 w-4 mr-2 text-orange-600" />
+                    <Label htmlFor="email" className="text-sm font-bold text-emerald-700 flex items-center">
+                      <Mail className="h-4 w-4 mr-2 text-emerald-600" />
                       Correo Electrónico
                     </Label>
                     <Input
@@ -107,13 +107,13 @@ export default function Profile() {
                       value={formData.email}
                       onChange={(e) => handleChange("email", e.target.value)}
                       placeholder="tu@sena.edu.co"
-                      className="border-2 border-orange-300 focus:border-orange-500 focus:ring-orange-500 font-medium"
+                      className="border-2 border-emerald-300 focus:border-emerald-500 focus:ring-emerald-500 font-medium"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-sm font-bold text-purple-700 flex items-center">
-                      <Phone className="h-4 w-4 mr-2 text-purple-600" />
+                    <Label htmlFor="phone" className="text-sm font-bold text-green-700 flex items-center">
+                      <Phone className="h-4 w-4 mr-2 text-green-600" />
                       Teléfono
                     </Label>
                     <Input
@@ -121,7 +121,7 @@ export default function Profile() {
                       value={formData.phone}
                       onChange={(e) => handleChange("phone", e.target.value)}
                       placeholder="3001234567"
-                      className="border-2 border-purple-300 focus:border-purple-500 focus:ring-purple-500 font-medium"
+                      className="border-2 border-green-300 focus:border-green-500 focus:ring-green-500 font-medium"
                     />
                   </div>
 
@@ -167,10 +167,10 @@ export default function Profile() {
         {/* Panel Lateral */}
         <div className="space-y-6">
           {/* Estadísticas del Usuario */}
-          <Card className="border-2 border-orange-300 shadow-md">
-            <CardHeader className="bg-orange-50 border-b-2 border-orange-200">
-              <CardTitle className="text-lg text-orange-700 flex items-center">
-                <Star className="mr-2 h-5 w-5 text-orange-600" />
+          <Card className="border-2 border-emerald-300 shadow-md">
+            <CardHeader className="bg-emerald-50 border-b-2 border-emerald-200">
+              <CardTitle className="text-lg text-emerald-700 flex items-center">
+                <Star className="mr-2 h-5 w-5 text-emerald-600" />
                 Estadísticas
               </CardTitle>
             </CardHeader>
@@ -183,20 +183,20 @@ export default function Profile() {
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-600 font-medium">Tiempo en Sistema</span>
-                <Badge className="bg-orange-100 text-orange-700 border-2 border-orange-300 font-bold">6 meses</Badge>
+                <Badge className="bg-emerald-100 text-emerald-700 border-2 border-emerald-300 font-bold">6 meses</Badge>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-600 font-medium">Último Acceso</span>
-                <Badge className="bg-purple-100 text-purple-700 border-2 border-purple-300 font-bold">Hoy</Badge>
+                <Badge className="bg-green-100 text-green-700 border-2 border-green-300 font-bold">Hoy</Badge>
               </div>
             </CardContent>
           </Card>
 
           {/* Información del Sistema */}
-          <Card className="border-2 border-purple-300 shadow-md">
-            <CardHeader className="bg-purple-50 border-b-2 border-purple-200">
-              <CardTitle className="text-lg text-purple-700 flex items-center">
-                <Calendar className="mr-2 h-5 w-5 text-purple-600" />
+          <Card className="border-2 border-green-300 shadow-md">
+            <CardHeader className="bg-green-50 border-b-2 border-green-200">
+              <CardTitle className="text-lg text-green-700 flex items-center">
+                <Calendar className="mr-2 h-5 w-5 text-green-600" />
                 Información del Sistema
               </CardTitle>
             </CardHeader>
@@ -204,7 +204,7 @@ export default function Profile() {
               <div className="text-center">
                 <div className="text-2xl mb-2">🏛️</div>
                 <h3 className="font-bold text-green-700 mb-1">CampeSena</h3>
-                <p className="text-sm text-orange-600 mb-3 font-medium">Sistema de Gestión SENA</p>
+                <p className="text-sm text-emerald-600 mb-3 font-medium">Sistema de Gestión SENA</p>
                 <div className="flex items-center justify-center space-x-2 p-2 bg-green-50 rounded-lg border-2 border-green-200">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   <span className="text-xs text-green-700 font-bold">Sistema Activo</span>
@@ -224,8 +224,8 @@ export default function Profile() {
             <CardContent className="p-6">
               <div className="text-center">
                 <div className="text-2xl mb-2">🏢</div>
-                <h3 className="font-bold text-orange-700 mb-1">Centro de Gestión</h3>
-                <p className="text-sm text-purple-600 mb-2 font-medium">Agroempresarial del Oriente</p>
+                <h3 className="font-bold text-emerald-700 mb-1">Centro de Gestión</h3>
+                <p className="text-sm text-green-600 mb-2 font-medium">Agroempresarial del Oriente</p>
                 <Badge className="bg-green-100 text-green-700 border-2 border-green-300 text-xs font-bold">
                   Antioquia, Colombia
                 </Badge>

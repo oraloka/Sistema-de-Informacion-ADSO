@@ -238,7 +238,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
       case 2:
         return (
           <Card className="border border-slate-200 shadow-sm">
-            <CardHeader className="bg-gradient-to-r from-amber-50 to-orange-50 border-b border-slate-200">
+            <CardHeader className="bg-gradient-to-r from-amber-50 to-emerald-50 border-b border-slate-200">
               <CardTitle className="flex items-center text-xl text-slate-800">
                 <div className="p-2 bg-amber-100 rounded-lg mr-3">
                   <GraduationCap className="h-6 w-6 text-amber-600" />
@@ -446,7 +446,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
       case 4:
         return (
           <Card className="border border-slate-200 shadow-sm">
-            <CardHeader className="bg-gradient-to-r from-amber-50 to-orange-50 border-b border-slate-200">
+            <CardHeader className="bg-gradient-to-r from-amber-50 to-emerald-50 border-b border-slate-200">
               <CardTitle className="flex items-center text-xl text-slate-800">
                 <div className="p-2 bg-amber-100 rounded-lg mr-3">
                   <FileText className="h-6 w-6 text-amber-600" />
@@ -590,7 +590,7 @@ export default function CreateFicha({ onTabChange }: CreateFichaProps) {
       case 6:
         return (
           <Card className="border border-slate-200 shadow-sm">
-            <CardHeader className="bg-gradient-to-r from-amber-50 to-orange-50 border-b border-slate-200">
+            <CardHeader className="bg-gradient-to-r from-amber-50 to-emerald-50 border-b border-slate-200">
               <CardTitle className="flex items-center text-xl text-slate-800">
                 <div className="p-2 bg-amber-100 rounded-lg mr-3">
                   <FileSignature className="h-6 w-6 text-amber-600" />

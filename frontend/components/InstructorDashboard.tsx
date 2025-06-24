@@ -40,33 +40,30 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       change: "+2 esta semana",
       progress: 75,
       trend: "up",
-      emoji: "📝",
     },
     {
       title: "En Revisión",
       value: "3",
       description: "Esperando aprobación",
       icon: Clock,
-      color: "text-orange-700",
-      bgColor: "bg-orange-50",
-      borderColor: "border-orange-400",
+      color: "text-emerald-700",
+      bgColor: "bg-emerald-50",
+      borderColor: "border-emerald-400",
       change: "Pendientes",
       progress: 40,
       trend: "neutral",
-      emoji: "⏳",
     },
     {
       title: "Aprobadas",
       value: "8",
       description: "Fichas aprobadas",
       icon: CheckCircle,
-      color: "text-purple-700",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-400",
+      color: "text-green-700",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-400",
       change: "+5 este mes",
       progress: 90,
       trend: "up",
-      emoji: "🎉",
     },
     {
       title: "Rechazadas",
@@ -79,7 +76,6 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       change: "Para revisar",
       progress: 15,
       trend: "down",
-      emoji: "🔄",
     },
   ]
 
@@ -91,8 +87,6 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       status: "aprobada",
       fecha: "2024-01-15",
       cupos: 25,
-      priority: "high",
-      emoji: "✅",
       color: "green",
       borderColor: "border-green-300",
       bgColor: "bg-green-50",
@@ -105,10 +99,9 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       fecha: "2024-01-20",
       cupos: 30,
       priority: "medium",
-      emoji: "⏰",
-      color: "orange",
-      borderColor: "border-orange-300",
-      bgColor: "bg-orange-50",
+      color: "emerald",
+      borderColor: "border-emerald-300",
+      bgColor: "bg-emerald-50",
     },
     {
       id: 3,
@@ -118,7 +111,6 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       fecha: "2024-01-18",
       cupos: 20,
       priority: "high",
-      emoji: "🔄",
       color: "red",
       borderColor: "border-red-300",
       bgColor: "bg-red-50",
@@ -130,7 +122,7 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       case "aprobada":
         return "bg-green-100 text-green-700 border-2 border-green-300"
       case "pendiente":
-        return "bg-orange-100 text-orange-700 border-2 border-orange-300"
+        return "bg-emerald-100 text-emerald-700 border-2 border-emerald-300"
       case "rechazada":
         return "bg-red-100 text-red-700 border-2 border-red-300"
       default:
@@ -162,8 +154,8 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
               <div>
                 <h1 className="text-3xl font-bold text-green-700">Dashboard del Instructor</h1>
                 <div className="flex items-center space-x-2 mt-1">
-                  <Sparkles className="h-4 w-4 text-orange-500" />
-                  <span className="text-purple-600 font-bold">CampeSena - Tu Espacio Creativo</span>
+                  <Sparkles className="h-4 w-4 text-emerald-500" />
+                  <span className="text-green-600 font-bold">CampeSena - Tu Espacio Creativo</span>
                 </div>
               </div>
             </div>
@@ -173,7 +165,7 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
                 <Calendar className="h-4 w-4 mr-2" />
                 {new Date().toLocaleDateString()}
               </Badge>
-              <Badge className="bg-orange-100 text-orange-700 border-2 border-orange-300 px-4 py-2 font-bold">
+              <Badge className="bg-emerald-100 text-emerald-700 border-2 border-emerald-300 px-4 py-2 font-bold">
                 <Target className="h-4 w-4 mr-2" />
                 Objetivo: 15 fichas
               </Badge>
@@ -182,14 +174,14 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
           <div className="flex items-center space-x-4">
             <Button
               onClick={() => onTabChange("create-ficha")}
-              className="bg-purple-100 text-purple-700 hover:bg-purple-200 font-bold px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300 border-2 border-purple-300"
+              className="bg-green-100 text-green-700 hover:bg-green-200 font-bold px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300 border-2 border-green-300"
               variant="outline"
             >
               <Plus className="mr-2 h-5 w-5" />
               Nueva Ficha
             </Button>
-            <div className="hidden md:block p-6 bg-orange-50 rounded-xl hover:scale-105 transition-transform duration-300 border-2 border-orange-300">
-              <BookOpen className="h-12 w-12 text-orange-600" />
+            <div className="hidden md:block p-6 bg-emerald-50 rounded-xl hover:scale-105 transition-transform duration-300 border-2 border-emerald-300">
+              <BookOpen className="h-12 w-12 text-emerald-600" />
             </div>
           </div>
         </div>
@@ -209,8 +201,6 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
             >
               <CardContent className="p-0">
                 <div className={`${stat.bgColor} p-6 relative overflow-hidden`}>
-                  <div className="absolute top-2 right-2 text-2xl opacity-80">{stat.emoji}</div>
-
                   <div className="flex items-center justify-between relative z-10">
                     <div className="flex items-center space-x-3">
                       <div
@@ -267,17 +257,17 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-orange-400 shadow-md group cursor-pointer bg-white">
+        <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-emerald-400 shadow-md group cursor-pointer bg-white">
           <CardContent className="p-6 text-center">
             <div className="text-4xl mb-4">📋</div>
-            <div className="p-4 bg-orange-50 rounded-xl w-fit mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md border-2 border-orange-300">
-              <FileText className="h-8 w-8 text-orange-600" />
+            <div className="p-4 bg-emerald-50 rounded-xl w-fit mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md border-2 border-emerald-300">
+              <FileText className="h-8 w-8 text-emerald-600" />
             </div>
-            <h3 className="font-bold text-xl mb-2 text-orange-700">Ver Mis Fichas</h3>
+            <h3 className="font-bold text-xl mb-2 text-emerald-700">Ver Mis Fichas</h3>
             <p className="text-gray-600 mb-4 font-medium">Revisa el estado de todas tus fichas enviadas</p>
             <Button
               onClick={() => onTabChange("fichas")}
-              className="bg-orange-100 text-orange-700 border-2 border-orange-400 hover:bg-orange-200 w-full font-bold shadow-md hover:shadow-lg transition-all duration-300"
+              className="bg-emerald-100 text-emerald-700 border-2 border-emerald-400 hover:bg-emerald-200 w-full font-bold shadow-md hover:shadow-lg transition-all duration-300"
               variant="outline"
             >
               Ver Fichas
@@ -287,13 +277,13 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
       </div>
 
       {/* Recent Fichas Elegantes */}
-      <Card className="border-2 border-purple-300 shadow-md bg-white">
-        <CardHeader className="bg-purple-50 border-b-2 border-purple-200">
-          <CardTitle className="flex items-center text-xl text-purple-700">
-            <Award className="mr-3 h-6 w-6 text-purple-600" />
+      <Card className="border-2 border-green-300 shadow-md bg-white">
+        <CardHeader className="bg-green-50 border-b-2 border-green-200">
+          <CardTitle className="flex items-center text-xl text-green-700">
+            <Award className="mr-3 h-6 w-6 text-green-600" />
             Mis Fichas Recientes
           </CardTitle>
-          <CardDescription className="text-purple-600 font-medium">
+          <CardDescription className="text-green-600 font-medium">
             Últimas fichas de caracterización creadas
           </CardDescription>
         </CardHeader>
@@ -306,13 +296,12 @@ export default function InstructorDashboard({ onTabChange }: InstructorDashboard
               >
                 <div className="flex-1">
                   <div className="flex items-center space-x-3 mb-2">
-                    <div className="text-3xl">{ficha.emoji}</div>
                     <h3 className="font-bold text-lg text-gray-800">{ficha.programa}</h3>
                     <Badge
                       className={`text-xs font-bold ${
                         ficha.priority === "high"
                           ? "bg-green-100 text-green-700 border-2 border-green-300"
-                          : "bg-orange-100 text-orange-700 border-2 border-orange-300"
+                          : "bg-emerald-100 text-emerald-700 border-2 border-emerald-300"
                       }`}
                     >
                       {ficha.priority === "high" ? "Alta" : ficha.priority === "medium" ? "Media" : "Baja"}

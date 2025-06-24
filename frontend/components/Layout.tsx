@@ -39,17 +39,17 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
       id: "profile",
       label: "Mi Perfil",
       icon: User,
-      color: "text-purple-600",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-200",
+      color: "text-green-600",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200",
     },
     {
       id: "instructors",
       label: "Instructores",
       icon: Users,
-      color: "text-orange-600",
-      bgColor: "bg-orange-50",
-      borderColor: "border-orange-200",
+      color: "text-emerald-600",
+      bgColor: "bg-emerald-50",
+      borderColor: "border-emerald-200",
     },
     {
       id: "requests",
@@ -63,9 +63,9 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
       id: "notifications",
       label: "Notificaciones",
       icon: Bell,
-      color: "text-purple-700",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-200",
+      color: "text-green-700",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200",
     },
   ]
 
@@ -82,17 +82,17 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
       id: "profile",
       label: "Mi Perfil",
       icon: User,
-      color: "text-purple-600",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-200",
+      color: "text-green-600",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200",
     },
     {
       id: "fichas",
       label: "Mis Fichas",
       icon: FileText,
-      color: "text-orange-600",
-      bgColor: "bg-orange-50",
-      borderColor: "border-orange-200",
+      color: "text-emerald-600",
+      bgColor: "bg-emerald-50",
+      borderColor: "border-emerald-200",
     },
     {
       id: "create-ficha",
@@ -131,7 +131,7 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
               </div>
               <div>
                 <h1 className="text-xl font-bold text-green-700">Sistema de Gestión SENA</h1>
-                <p className="text-sm text-orange-600 font-medium">Formación Complementaria</p>
+                <p className="text-sm text-emerald-600 font-medium">Formación Complementaria</p>
               </div>
             </div>
           </div>
@@ -140,11 +140,11 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
             <Button
               variant="ghost"
               size="sm"
-              className="relative hover:bg-purple-50 transition-colors text-purple-600"
+              className="relative hover:bg-green-50 transition-colors text-green-600"
               onClick={() => onTabChange("notifications")}
             >
               <Bell className="h-5 w-5" />
-              <Badge className="absolute -top-1 -right-1 h-5 w-5 p-0 bg-orange-500 hover:bg-orange-600 text-xs flex items-center justify-center border-2 border-white">
+              <Badge className="absolute -top-1 -right-1 h-5 w-5 p-0 bg-emerald-500 hover:bg-emerald-600 text-xs flex items-center justify-center border-2 border-white">
                 3
               </Badge>
             </Button>
@@ -162,7 +162,7 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
                   </Avatar>
                   <div className="hidden md:block text-left">
                     <p className="font-semibold text-green-700">{user?.name}</p>
-                    <p className="text-xs text-purple-600 capitalize">{user?.role}</p>
+                    <p className="text-xs text-green-600 capitalize">{user?.role}</p>
                   </div>
                 </Button>
               </DropdownMenuTrigger>
@@ -191,13 +191,13 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
           ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
         `}
         >
-          <div className="flex items-center justify-between p-6 border-b-2 border-purple-200 lg:hidden">
-            <span className="text-xl font-semibold text-purple-700">Menú</span>
+          <div className="flex items-center justify-between p-6 border-b-2 border-green-200 lg:hidden">
+            <span className="text-xl font-semibold text-green-700">Menú</span>
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setSidebarOpen(false)}
-              className="hover:bg-purple-50 text-purple-600"
+              className="hover:bg-green-50 text-green-600"
             >
               <X className="h-5 w-5" />
             </Button>
@@ -207,8 +207,8 @@ export default function Layout({ children, activeTab, onTabChange }: LayoutProps
             <div className="mb-6">
               <div className="p-4 bg-white rounded-lg border-2 border-green-300">
                 <p className="text-sm font-semibold text-green-700 mb-1">Bienvenido</p>
-                <p className="text-xs text-purple-600 mb-2">{user?.name}</p>
-                <Badge className="bg-orange-500 hover:bg-orange-600 text-xs text-white border-2 border-orange-400">
+                <p className="text-xs text-green-600 mb-2">{user?.name}</p>
+                <Badge className="bg-emerald-500 hover:bg-emerald-600 text-xs text-white border-2 border-emerald-400">
                   {user?.role === "coordinador" ? "Coordinador" : "Instructor"}
                 </Badge>
               </div>
