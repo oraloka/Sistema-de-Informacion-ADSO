@@ -85,10 +85,10 @@ export default function Login() {
               onMouseLeave={() => setLogoHovered(false)}
             >
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-mZimonhe4gqnzXFhmpbtfN2IKjEQDh.png"
-                alt="SENA Logo"
-                className={`h-20 w-auto transition-all duration-500 ${logoHovered ? "brightness-125 drop-shadow-lg" : ""}`}
-              />
+  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-mZimonhe4gqnzXFhmpbtfN2IKjEQDh.png"
+  alt="SENA Logo"
+  className="h-20 w-auto transition-all duration-500 brightness-125 hover:brightness-75"
+/>
             </div>
 
             <h1 className="text-5xl font-bold mb-6 leading-tight">
@@ -132,19 +132,6 @@ export default function Login() {
               })}
             </div>
           </div>
-
-          {/* Información del centro */}
-          <div className="mt-12 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-            <div className="text-center">
-              <h4 className="font-bold text-white text-lg mb-2">Centro de Gestión Agroempresarial del Oriente</h4>
-              <p className="text-green-100 text-sm mb-3">Formación para el trabajo y el desarrollo humano</p>
-              <div className="flex items-center justify-center space-x-2">
-                <div className="w-3 h-3 bg-green-300 rounded-full animate-pulse"></div>
-                <span className="text-green-200 text-sm font-medium">Sistema Activo</span>
-                <CheckCircle className="h-4 w-4 text-green-300" />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -153,7 +140,7 @@ export default function Login() {
         <div className="w-full max-w-md">
           {/* Header del formulario */}
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">¡Bienvenido!</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Bienvenido</h2>
             <p className="text-gray-600 text-lg mb-6">Ingresa tus credenciales para continuar</p>
             <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-green-600 mx-auto rounded-full"></div>
           </div>
@@ -233,27 +220,6 @@ export default function Login() {
             </form>
           </Card>
 
-          {/* Credenciales de prueba */}
-          <div className="mt-8 p-6 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl border-2 border-green-200">
-            <div className="text-center">
-              <p className="text-sm font-bold text-green-800 mb-4 flex items-center justify-center">
-                <Shield className="h-5 w-5 mr-2" />
-                Credenciales de Prueba
-              </p>
-              <div className="space-y-3 text-sm">
-                <div className="p-4 bg-white/80 backdrop-blur-sm rounded-xl hover:bg-white transition-colors border border-green-200">
-                  <p className="font-bold text-green-700 mb-2">👨‍💼 Coordinador</p>
-                  <p className="text-green-600 font-mono">coordinador@sena.edu.co</p>
-                  <p className="text-green-600 font-mono">123456</p>
-                </div>
-                <div className="p-4 bg-white/80 backdrop-blur-sm rounded-xl hover:bg-white transition-colors border border-green-200">
-                  <p className="font-bold text-blue-700 mb-2">👨‍🏫 Instructor</p>
-                  <p className="text-blue-600 font-mono">instructor@sena.edu.co</p>
-                  <p className="text-blue-600 font-mono">123456</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 

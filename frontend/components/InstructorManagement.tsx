@@ -52,6 +52,7 @@ export default function InstructorManagement() {
     email: "",
     phone: "",
     center: "",
+    password:"",
   })
   const [showSuccess, setShowSuccess] = useState(false)
 
@@ -79,7 +80,7 @@ export default function InstructorManagement() {
       setInstructors((prev) => [...prev, newInstructor])
     }
 
-    setFormData({ name: "", email: "", phone: "", center: "" })
+    setFormData({ name: "", email: "", phone: "", center: "", password:""})
     setEditingInstructor(null)
     setIsDialogOpen(false)
     setShowSuccess(true)
@@ -93,6 +94,7 @@ export default function InstructorManagement() {
       email: instructor.email,
       phone: instructor.phone || "",
       center: instructor.center || "",
+      password: "",
     })
     setIsDialogOpen(true)
   }
@@ -104,7 +106,7 @@ export default function InstructorManagement() {
   }
 
   const resetForm = () => {
-    setFormData({ name: "", email: "", phone: "", center: "" })
+    setFormData({ name: "", email: "", phone: "", center: "", password:"" })
     setEditingInstructor(null)
   }
 
@@ -181,6 +183,18 @@ export default function InstructorManagement() {
                   onChange={(e) => setFormData((prev) => ({ ...prev, center: e.target.value }))}
                   placeholder="Nombre del centro"
                   required
+                />
+              </div>
+
+                <div className="space-y-2">
+                <Label htmlFor="password">Contraseña</Label>
+                <Input
+                  id="password"
+                  type="password"
+                  value={formData.password}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, password: e.target.value }))}
+                  placeholder="Contraseña del instructor"
+                  required={!editingInstructor} // Solo obligatoria al crear
                 />
               </div>
 
