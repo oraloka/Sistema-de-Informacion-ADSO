@@ -1,6 +1,13 @@
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 
-export const generateToken = (user) => {
+dotenv.config();
+
+export const generateToken = (user, expiresIn = '1h') => {
+  if (!user || !user.id || !user.correo) {
+    throw new Error("Datos de usuario inválidos para generar el token");
+  }
+
   return jwt.sign(
     {
       id: user.id,
@@ -8,6 +15,6 @@ export const generateToken = (user) => {
       rol: user.rol
     },
     process.env.JWT_SECRET,
-    { expiresIn: "1d" }
+    { expiresIn }
   );
 };

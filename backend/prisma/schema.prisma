@@ -8,34 +8,31 @@ datasource db {
 }
 
 model Usuario {
-  id        Int       @id @default(autoincrement())
-  nombre    String
-  correo    String    @unique
-  password  String
-  rol       Rol       @default(INSTRUCTOR)
-  fichas    Ficha[]   @relation("InstructorFichas")
+  id           Int     @id @default(autoincrement())
+  nombre       String
+  correo       String  @unique
+  password     String
+  rol          Rol     @default(INSTRUCTOR)
+  telefono     String
   aprobaciones Ficha[] @relation("CoordinadorAprobaciones")
+  fichas       Ficha[] @relation("InstructorFichas")
 }
 
 model Ficha {
-  id           Int      @id @default(autoincrement())
-  codigo       String   @unique
-  programa     String
-  duracion     Int
-  modalidad    String
-  fechaInicio  DateTime
-  fechaFin     DateTime
-  estado       String   @default("pendiente")
-  observacion  String?  // Para comentarios del coordinador
-  createdAt    DateTime @default(now())
-
-  // Relación con Instructor
-  instructorId Int
-  instructor   Usuario   @relation("InstructorFichas", fields: [instructorId], references: [id])
-
-  // Relación con Coordinador (opcional)
-  coordinadorId Int? 
+  id            Int      @id @default(autoincrement())
+  codigo        String   @unique
+  programa      String
+  duracion      Int
+  modalidad     String
+  fechaInicio   DateTime
+  fechaFin      DateTime
+  estado        String   @default("pendiente")
+  observacion   String?
+  createdAt     DateTime @default(now())
+  instructorId  Int
+  coordinadorId Int?
   coordinador   Usuario? @relation("CoordinadorAprobaciones", fields: [coordinadorId], references: [id])
+  instructor    Usuario  @relation("InstructorFichas", fields: [instructorId], references: [id])
 }
 
 enum Rol {
